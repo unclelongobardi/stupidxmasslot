@@ -187,8 +187,8 @@
 
         spinButton.addEventListener('click', () => {
             const currentTime = Date.now();
-            if (currentTime - lastSpinTime < 20000) {
-                message.textContent = 'You can only spin once every 20 seconds.';
+            if (currentTime - lastSpinTime < 7000) {
+                message.textContent = 'Hey degen, you can only spin once every 7 seconds. LOL 7 cool number right?';
                 return;
             }
 
