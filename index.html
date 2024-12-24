@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STUPID XMAS SLOT</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='50%' x='0' font-size='90'>🎅</text></svg>">
+    <style>
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            background: linear-gradient(to bottom, #b22222, #800000);
+            color: #fff;
+            text-align: center;
+        }
+        h1 {
+            color: #ffcc00;
+            text-shadow: 3px 3px 5px #000;
+            font-size: 3rem;
+            margin-top: 20px;
+        }
+        .slot-machine {
+            display: inline-block;
+            margin: 20px auto;
+            border: 5px solid #fff;
+            padding: 20px;
+            background: #8b0000;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+        }
+        .slots {
+            display: flex;
+            justify-content: center;
+            font-size: 2.5rem;
+            margin: 20px 0;
+            background: #660000;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+        }
+        .slots span {
+            width: 70px;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 3px solid #fff;
+            border-radius: 10px;
+            margin: 0 5px;
+            font-size: 2rem;
+            background: #cc0000;
+            color: #fff;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+        }
+        .button {
+            padding: 15px 30px;
+            margin: 20px;
+            background: linear-gradient(to bottom, #ffcc00, #cc6600);
+            color: #000;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.5rem;
+            box-shadow: 0 4px #663300;
+            text-transform: uppercase;
+        }
+        .button:active {
+            box-shadow: 0 2px #663300;
+            transform: translateY(2px);
+        }
+        #message {
+            margin-top: 20px;
+            font-size: 1.2rem;
+            color: #ffcc00;
+            text-shadow: 1px 1px #000;
+        }
+        #walletDisplay {
+            margin-top: 20px;
+            font-size: 1rem;
+            color: #00ffcc;
+            text-shadow: 1px 1px #000;
+        }
+        .wallet-input {
+            margin: 20px 0;
+        }
+        .wallet-input label {
+            font-size: 1rem;
+            color: #fff;
+        }
+        .wallet-input input {
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            margin-top: 10px;
+            width: 300px;
+            text-align: center;
+            font-size: 1rem;
+            box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+        }
+        .footer {
+            margin-top: 40px;
+            font-size: 0.9rem;
+            color: #ffcc00;
+            text-align: left;
+            padding: 20px;
+            background: #660000;
+            border-top: 2px solid #fff;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.5);
+        }
+        .pill-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 2rem;
+            text-decoration: none;
+            color: #ffcc00;
+            background: #8b0000;
+            padding: 10px;
+            border-radius: 50%;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .pill-button:hover {
+            background: #ff4500;
+        }
+    </style>
+</head>
+<body>
+    <a href="https://www.pumpfun.com" target="_blank" class="pill-button">💊</a>
+    <h1>STUPID XMAS SLOT</h1>
+    <p>Spin the reels and feel the holiday magic!</p>
+    <div class="slot-machine">
+        <div class="slots" id="slots">
+            <span>-</span>
+            <span>-</span>
+            <span>-</span>
+            <span>-</span>
+            <span>-</span>
+            <span>-</span>
+            <span>-</span>
+            <span>-</span>
+            <span>-</span>
+            <span>-</span>
+        </div>
+        <div class="wallet-input">
+            <label for="walletAddress">Enter your Solana Wallet:</label><br>
+            <input type="text" id="walletAddress" placeholder="Your wallet address here">
+        </div>
+        <button class="button" id="spinButton">Spin</button>
+        <p id="walletDisplay"></p>
+        <p id="message"></p>
+    </div>
+
+    <h2>Winning Combination</h2>
+    <p>🎅 x10 = Jackpot!</p>
+
+    <div class="footer">
+        <p><strong>shitpaper:</strong></p>
+        <p>Alright, it’s simple: a slot machine, just like in a casino. You enter your Solana wallet, no need to connect it because, honestly, I couldn’t be bothered to implement Wallet Connect or add security measures to stop your funds from being drained. You can spin once every 20 seconds. If you hit the jackpot—10 Santa Clauses in a row—which, based on my quick math, has odds somewhere around 1 in 25,937,424,601, the code will automatically trigger and send you the entire dev wallet. That’ll be about 4% of the total supply, because I’m planning to buy 1 Solana when I deploy the thing.</p>
+        <p>OBVIOUSLY, you’ll need to hold at least 2,500,000 tokens (0.25% of the supply) for the funds to be sent to you. If the script doesn’t detect that you have that percentage, no funds for you, and the jackpot stays unclaimed. Honestly, I’ll probably laugh pretty hard about it—just being real here.</p>
+        <p>I’m not making a Telegram group or a Twitter account either. I’ve got dinner plans with my family. Besides, let’s be real, you don’t want to hang out in a Telegram group with 100 other losers playing this on Christmas. Maybe someone will make a Discord or something—I don’t know. Anyway, have fun!</p>
+    </div>
+
+    <script>
+        const slotOptions = ['🎅', '🎄', '❄️', '🎁', '🍪', '🦌', '🌟', '🧦', '🔔', '🕯️', '🎆'];
+        const spinButton = document.getElementById('spinButton');
+        const slots = document.getElementById('slots');
+        const message = document.getElementById('message');
+        const walletAddressInput = document.getElementById('walletAddress');
+        const walletDisplay = document.getElementById('walletDisplay');
+
+        const jackpotCombination = Array(10).fill('🎅');
+        let lastSpinTime = 0;
+
+        function spinSlots() {
+            let result = [];
+            for (let i = 0; i < 10; i++) {
+                result.push(slotOptions[Math.floor(Math.random() * slotOptions.length)]);
+            }
+            return result;
+        }
+
+        function checkJackpot(result) {
+            return JSON.stringify(result) === JSON.stringify(jackpotCombination);
+        }
+
+        spinButton.addEventListener('click', () => {
+            const currentTime = Date.now();
+            if (currentTime - lastSpinTime < 20000) {
+                message.textContent = 'You can only spin once every 20 seconds.';
+                return;
+            }
+
+            const walletAddress = walletAddressInput.value.trim();
+
+            if (!walletAddress || walletAddress.length !== 44) {
+                message.textContent = 'Error: That is not a valid Solana wallet.';
+                return;
+            }
+
+            walletDisplay.textContent = `You are playing with the following wallet: ${walletAddress}`;
+
+            const result = spinSlots();
+            slots.innerHTML = result.map(symbol => `<span>${symbol}</span>`).join('');
+
+            if (checkJackpot(result)) {
+                message.textContent = `🎉 Jackpot! You won! Your prize will be sent to: ${walletAddress}`;
+            } else {
+                message.textContent = 'Better luck next time!';
+            }
+
+            lastSpinTime = currentTime;
+        });
+    </script>
+</body>
+</html>
